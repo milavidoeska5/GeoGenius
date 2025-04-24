@@ -32,6 +32,8 @@ public class User  implements UserDetails {
     @Enumerated(EnumType.STRING)
     private Role role;
 
+    private Integer points = 0;
+
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

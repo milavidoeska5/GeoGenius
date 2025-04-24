@@ -1,8 +1,10 @@
 package mk.ukim.finki.geogenius.service.implementation;
 
 import mk.ukim.finki.geogenius.model.User;
+import mk.ukim.finki.geogenius.model.dto.ChangePasswordDto;
 import mk.ukim.finki.geogenius.model.dto.LoginDto;
 import mk.ukim.finki.geogenius.model.dto.RegisterDto;
+import mk.ukim.finki.geogenius.model.dto.UserDto;
 import mk.ukim.finki.geogenius.model.enumerations.Role;
 import mk.ukim.finki.geogenius.model.exceptions.EmailAlreadyExistsException;
 import mk.ukim.finki.geogenius.model.exceptions.InvalidCredentialsException;
@@ -61,5 +63,32 @@ public class UserServiceImplementation implements UserService {
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         return userRepository.findByUsername(username)
                 .orElseThrow(() -> new UsernameNotFoundException("User not found"));
+    }
+
+    @Override
+    public UserDto getProfile(String username) {
+        User user = userRepository.findByUsername(username)
+                .orElseThrow(() -> new UsernameNotFoundException("User not found"));
+
+        return new UserDto(
+                user.getUsername(),
+                user.getFirstName(),
+                user.getLastName(),
+                user.getEmail(),
+                user.getPoints()
+        );
+    }
+
+    @Override
+    public void changePassword(String username, ChangePasswordDto dto) {
+        User user = userRepository.findByUsername(username)
+                .orElseThrow(() -> new UsernameNotFoundException("User not found"));
+
+        if (!passwordEncoder.matches(dto.getOldPassword(), user.getPassword())) {
+            throw new RuntimeException("Old password is incorrect");
+        }
+
+        user.setPassword(passwordEncoder.encode(dto.getNewPassword()));
+        userRepository.save(user);
     }
 }
