@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Chatbot</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .message { margin-bottom: 15px; }
+        .question { font-weight: bold; }
+        .answer { margin-left: 20px; color: #333; }
+        #chat-box { margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Chat with the Bot</h1>
+
+    <div id="chat-box"></div>
+
+    <form id="chat-form">
+        <input type="text" id="question" placeholder="Ask a question..." required style="width: 300px;">
+        <button type="submit">Send</button>
+    </form>
+
+    <script>
+        const form = document.getElementById('chat-form');
+        const questionInput = document.getElementById('question');
+        const chatBox = document.getElementById('chat-box');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const question = questionInput.value;
+            questionInput.value = '';
+
+            // Display the question
+            const questionElement = document.createElement('div');
+            questionElement.classList.add('message', 'question');
+            questionElement.textContent = 'You: ' + question;
+            chatBox.appendChild(questionElement);
+
+            // Send request to the backend
+            try {
+                const response = await fetch('/chat', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ question: question }),
+                });
+
+                const data = await response.json();
+
+                // Display the answer
+                const answerElement = document.createElement('div');
+                answerElement.classList.add('message', 'answer');
+                answerElement.textContent = 'Bot: ' + data.answer;
+                chatBox.appendChild(answerElement);
+
+                // Scroll to bottom
+                chatBox.scrollTop = chatBox.scrollHeight;
+            } catch (error) {
+                const errorElement = document.createElement('div');
+                errorElement.classList.add('message', 'answer');
+                errorElement.textContent = 'Bot: Error getting response.';
+                chatBox.appendChild(errorElement);
+            }
+        });
+    </script>
+</body>
+</html>
