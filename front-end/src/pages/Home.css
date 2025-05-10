@@ -1,0 +1,125 @@
+.home-wrapper {
+  width: 100%;
+  min-height: 70vh;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  justify-content: center;
+}
+
+.home-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1800px;
+  margin: 60px 0 80px 0;
+  gap: 120px;
+  box-sizing: border-box;
+}
+
+.home-left {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0;
+}
+
+.home-left h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: #181818;
+}
+
+.home-left p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 24px;
+}
+
+.start-btn {
+  background: #7c4a1a;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 32px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.start-btn:hover {
+  background: #5a3212;
+}
+
+.home-center {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  min-width: 350px;
+}
+
+.home-illustration {
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
+  margin-bottom: 0;
+  border-radius: 12px;
+}
+
+.home-student {
+  width: 240px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+.home-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0;
+}
+
+.home-right h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: #181818;
+}
+
+.home-right ul {
+  list-style: disc inside;
+  color: #222;
+  font-size: 1rem;
+  padding-left: 18px;
+}
+
+.home-right li {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 900px) {
+  .home-main {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+  .home-left, .home-right {
+    align-items: center;
+    text-align: center;
+    padding: 0;
+  }
+} 

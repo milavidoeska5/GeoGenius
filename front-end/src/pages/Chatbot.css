@@ -1,0 +1,354 @@
+.dark-mode-bg, .dark-mode-bg .App, .dark-mode-bg html {
+  background: #181a1b !important;
+}
+
+body.dark-mode-bg {
+  background: #181a1b !important;
+}
+
+.chatbot-wrapper {
+  display: flex;
+  height: 100vh;
+  background: #fafbfc;
+}
+
+.chatbot-wrapper.dark-mode {
+  background: #181a1b;
+}
+
+.chatbot-sidebar {
+  width: 260px;
+  background: #fff;
+  border-right: 1px solid #eee;
+  padding: 32px 24px 16px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.chatbot-wrapper.dark-mode .chatbot-sidebar {
+  background: #23272a;
+  border-right: 1px solid #222;
+  color: #eee;
+}
+
+.chatbot-mode-section {
+  margin-top: 24px;
+}
+
+.chatbot-mode-input {
+  width: 100%;
+  margin: 8px 0 16px 0;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #f5f5f5;
+}
+
+.chatbot-wrapper.dark-mode .chatbot-mode-input {
+  background: #23272a;
+  color: #eee;
+  border: 1px solid #333;
+}
+
+.chatbot-checkbox-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+.chatbot-wrapper.dark-mode .chatbot-checkbox-group label {
+  color: #ccc;
+}
+
+.chatbot-sidebar-footer {
+  display: flex;
+  gap: 10px;
+  margin-top: 32px;
+}
+
+.chatbot-history-btn, .chatbot-main-btn {
+  flex: 1;
+  padding: 8px 0;
+  border: none;
+  border-radius: 6px;
+  background: #f5f5f5;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.chatbot-wrapper.dark-mode .chatbot-history-btn,
+.chatbot-wrapper.dark-mode .chatbot-main-btn {
+  background: #23272a;
+  color: #eee;
+}
+
+.chatbot-main-btn {
+  background: #111;
+  color: #fff;
+}
+
+.chatbot-main-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #fafbfc;
+}
+
+.chatbot-wrapper.dark-mode .chatbot-main-area {
+  background: #181a1b;
+}
+
+.chatbot-plan-banner {
+  display: flex;
+  align-items: center;
+  background: #f7e3b5;
+  padding: 12px 32px;
+  font-size: 16px;
+  gap: 18px;
+  border-bottom: 1px solid #eee;
+}
+
+.chatbot-wrapper.dark-mode .chatbot-plan-banner {
+  background: #2d2f36;
+  color: #ffd600;
+  border-bottom: 1px solid #222;
+}
+
+.chatbot-plan-icon {
+  font-size: 28px;
+}
+
+.chatbot-plan-active {
+  color: #1dbf73;
+  font-weight: 600;
+  margin-left: 4px;
+}
+
+.chatbot-wrapper.dark-mode .chatbot-plan-active {
+  color: #1dbf73;
+}
+
+.chatbot-plan-upgrade {
+  color: #e6b800;
+  font-weight: 600;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.chatbot-plan-help, .chatbot-plan-api {
+  margin-left: 18px;
+  color: #888;
+  cursor: pointer;
+}
+
+.chatbot-user-avatar {
+  background: #222;
+  color: #fff;
+  border-radius: 6px;
+  padding: 4px 12px;
+  margin-left: 18px;
+  font-weight: 600;
+}
+
+.chatbot-wrapper.dark-mode .chatbot-user-avatar {
+  background: #ffd600;
+  color: #23272a;
+}
+
+.chatbot-chat-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 40px 0 0 0;
+}
+
+.chatbot-chat-area h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.chatbot-wrapper.dark-mode .chatbot-chat-area h1 {
+  color: #ffd600;
+}
+
+.chatbot-chat-subtitle {
+  color: #888;
+  margin-bottom: 32px;
+}
+
+.chatbot-wrapper.dark-mode .chatbot-chat-subtitle {
+  color: #ffd600;
+}
+
+.chatbot-chat-cards {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 40px;
+}
+
+.chatbot-chat-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  padding: 24px 20px;
+  min-width: 220px;
+  max-width: 260px;
+  flex: 1;
+}
+
+.chatbot-wrapper.dark-mode .chatbot-chat-card {
+  background: #23272a;
+  color: #eee;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+
+.chatbot-chat-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+}
+
+.chatbot-wrapper.dark-mode .chatbot-chat-card h3 {
+  color: #ffd600;
+}
+
+.chatbot-chat-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.chatbot-chat-card li {
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.chatbot-chat-card a {
+  color: #1a73e8;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.chatbot-wrapper.dark-mode .chatbot-chat-card a {
+  color: #ffd600;
+}
+
+.chatbot-chat-input-form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 32px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.chatbot-wrapper.dark-mode .chatbot-chat-input-form {
+  background: none;
+}
+
+.chatbot-chat-input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  background: #fff;
+}
+
+.chatbot-wrapper.dark-mode .chatbot-chat-input {
+  background: #23272a;
+  color: #eee;
+  border: 1px solid #333;
+}
+
+.chatbot-chat-send-btn {
+  background: #222;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0 18px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.chatbot-wrapper.dark-mode .chatbot-chat-send-btn {
+  background: #ffd600;
+  color: #23272a;
+}
+
+.chatbot-chat-send-btn:hover {
+  background: #444;
+}
+
+.chatbot-wrapper.dark-mode .chatbot-chat-send-btn:hover {
+  background: #ffe066;
+}
+
+.chatbot-chat-new-dialog {
+  background: none;
+  border: none;
+  color: #222;
+  font-size: 1rem;
+  margin-left: 8px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.chatbot-wrapper.dark-mode .chatbot-chat-new-dialog {
+  color: #ffd600;
+}
+
+.chatbot-messages {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 24px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 60px;
+}
+
+.chatbot-wrapper.dark-mode .chatbot-messages {
+  color: #eee;
+}
+
+.chatbot-message {
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 15px;
+  max-width: 90%;
+  word-break: break-word;
+  margin-bottom: 2px;
+}
+
+.chatbot-message-bot {
+  background: #f1f3f4;
+  align-self: flex-start;
+  color: #222;
+}
+
+.chatbot-wrapper.dark-mode .chatbot-message-bot {
+  background: #23272a;
+  color: #ffd600;
+}
+
+.chatbot-message-user {
+  background: #d1e7ff;
+  align-self: flex-end;
+  color: #0b3d91;
+}
+
+.chatbot-wrapper.dark-mode .chatbot-message-user {
+  background: #ffd600;
+  color: #23272a;
+}
+
+/* Add spacing above cards when messages are present */
+.chatbot-messages + .chatbot-chat-cards {
+  margin-top: 16px;
+} 

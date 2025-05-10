@@ -1,0 +1,111 @@
+.navbar {
+  width: 100vw;
+  background: #f7dfb9;
+  box-shadow: 0 1px 0 #e5e5e5;
+  padding: 0;
+}
+
+.navbar-content {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  padding: 0 32px;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #222;
+  gap: 8px;
+}
+
+.logo-icon {
+  font-size: 2rem;
+}
+
+.logo-text {
+  font-family: 'Dancing Script', cursive, sans-serif;
+  font-size: 2rem;
+  color: #222;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: #181818;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+}
+
+.navbar-links li a:hover {
+  color: #7c4a1a;
+}
+
+.contact-btn {
+  background: #8a8fa3;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 24px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.contact-btn:hover {
+  background: #5a3212;
+}
+
+.navbar-user {
+  margin-left: 24px;
+  font-weight: 600;
+  color: #2563eb;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+}
+
+.logout-btn {
+  margin-left: 12px;
+  background: #e53e3e;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 16px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.logout-btn:hover {
+  background: #b91c1c;
+}
+
+@media (max-width: 900px) {
+  .navbar-content {
+    flex-direction: column;
+    height: auto;
+    gap: 12px;
+    padding: 12px;
+  }
+  .navbar-links {
+    gap: 18px;
+  }
+  .contact-btn {
+    width: 100%;
+    margin-top: 8px;
+  }
+} 

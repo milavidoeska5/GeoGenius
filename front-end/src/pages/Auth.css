@@ -1,0 +1,140 @@
+.auth-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.auth-left {
+  flex: 1;
+  background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80') center center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-title {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(0,0,0,0.3);
+  padding: 20px 40px;
+  border-radius: 12px;
+}
+
+.auth-dot {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.auth-right {
+  flex: 1;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-form {
+  width: 100%;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.auth-form h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.auth-desc {
+  color: #888;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.auth-input-wrapper {
+  display: flex;
+  align-items: center;
+  background: #f7f7f7;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 0 10px;
+  margin-top: 6px;
+}
+
+.auth-icon {
+  font-size: 1.1rem;
+  color: #888;
+  margin-right: 6px;
+}
+
+.auth-input-wrapper input {
+  border: none;
+  background: transparent;
+  outline: none;
+  padding: 10px 0;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.auth-btn {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background 0.2s;
+}
+
+.auth-btn:hover {
+  background: #1741a6;
+}
+
+.arrow {
+  font-size: 1.2rem;
+}
+
+.auth-divider {
+  border-bottom: 1px solid #e0e0e0;
+  margin: 18px 0 0 0;
+}
+
+.auth-bottom-text {
+  color: #888;
+  font-size: 0.95rem;
+  margin-top: 8px;
+}
+
+.auth-bottom-text a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 4px;
+}
+
+@media (max-width: 900px) {
+  .auth-container {
+    flex-direction: column;
+  }
+  .auth-left, .auth-right {
+    flex: unset;
+    width: 100%;
+    min-height: 250px;
+  }
+  .auth-title {
+    font-size: 1.3rem;
+    padding: 10px 20px;
+  }
+} 
