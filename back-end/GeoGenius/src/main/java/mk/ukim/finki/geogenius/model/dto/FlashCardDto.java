@@ -7,6 +7,7 @@ import java.time.LocalDateTime;
 
 @Data
 public class FlashCardDto {
+    private Long id;
     private String title;
 
     private String description;
@@ -14,7 +15,8 @@ public class FlashCardDto {
     @JsonFormat(pattern = "dd.MM.yyyy HH:mm")
     private LocalDateTime creationDate;
 
-    public FlashCardDto(String title, String description, LocalDateTime creationDate) {
+    public FlashCardDto(Long id, String title, String description, LocalDateTime creationDate) {
+        this.id = id;
         this.title = title;
         this.description = description;
         this.creationDate = creationDate;

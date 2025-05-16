@@ -31,7 +31,7 @@ public class FlashCardServiceImplementation implements FlashCardService {
     public List<FlashCardDto> getApprovedCards() {
         return flashCardRepository.findByStatusOrderByCreationDateDesc(CardStatus.APPROVED)
                 .stream()
-                .map(card -> new FlashCardDto(card.getTitle(), card.getDescription(), card.getCreationDate()))
+                .map(card -> new FlashCardDto(card.getId(), card.getTitle(), card.getDescription(), card.getCreationDate()))
                 .collect(Collectors.toList());
     }
 
@@ -41,6 +41,7 @@ public class FlashCardServiceImplementation implements FlashCardService {
                 .orElseThrow(() -> new CardNotFoundException(String.format("Card with id: %d is not found", id)));
 
         return new FlashCardDto(
+                card.getId(),
                 card.getTitle(),
                 card.getDescription(),
                 card.getCreationDate()

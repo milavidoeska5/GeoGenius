@@ -75,7 +75,8 @@ public class UserServiceImplementation implements UserService {
                 user.getFirstName(),
                 user.getLastName(),
                 user.getEmail(),
-                user.getPoints()
+                user.getPoints(),
+                user.getRole()
         );
     }
 

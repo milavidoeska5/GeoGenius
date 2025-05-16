@@ -9,6 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/cards")
+@CrossOrigin(origins = "http://localhost:3000", allowCredentials = "true")
 public class FlashCardController {
 
     private final FlashCardService flashCardService;
