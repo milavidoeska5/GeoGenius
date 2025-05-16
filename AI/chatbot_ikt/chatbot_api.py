@@ -15,6 +15,14 @@ from langchain_core.runnables import RunnablePassthrough
 from flask import send_from_directory
 from langchain.chains.combine_documents import create_stuff_documents_chain
 from langchain.chains import create_history_aware_retriever
+from flask_cors import CORS
+
+
+# ==== Flask API ====
+app = Flask(__name__)
+CORS(app, resources={r"/api/*": {"origins": "http://localhost:3000"}})
+
+
 
 
 # ==== Paths ====
@@ -121,22 +129,30 @@ combine_docs_chain = create_stuff_documents_chain(llm=llm, prompt=custom_prompt)
 qa_chain = create_retrieval_chain(retriever=retriever, combine_docs_chain=combine_docs_chain)
 
 
-# ==== Flask API ====
-app = Flask(__name__)
 
-@app.route('/chat', methods=['POST'])
+import traceback
+
+@app.route('/api/chat', methods=['POST'])
 def chat():
-    user_input = request.json['question']  # frontend sends 'question'
-    response = qa_chain.invoke({
-        'input': user_input,  # 🔁 Fix here!
-        'chat_history': memory.chat_memory.messages
-    })
-    return jsonify({'answer': response['answer']})
+    try:
+        user_input = request.json['question']
+        print("📥 Received question:", user_input)
+        
+        response = qa_chain.invoke({
+            'input': user_input,
+            'chat_history': memory.chat_memory.messages
+        })
+        
+        print("📤 Response from model:", response)
+        return jsonify({'answer': response['answer']})
+    
+    except Exception as e:
+        print("❌ ERROR in /chat route")
+        traceback.print_exc()  # Prints full error
+        return jsonify({'answer': 'Internal server error'}), 500
 
 
-@app.route('/')
-def serve_index():
-    return send_from_directory('.', 'index.html')
+
 
 if __name__ == "__main__":
     app.run(port=5000)
