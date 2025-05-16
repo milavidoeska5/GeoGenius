@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Container, Row, Col, Form, Button, Card } from 'react-bootstrap';
+import './Style.css';
 
 const QuizStart = () => {
   const [topic, setTopic] = useState('');
@@ -12,19 +14,29 @@ const QuizStart = () => {
   };
 
   return (
-    <div style={{ padding: '2rem' }}>
-      <h2>What topic should the quiz be on?</h2>
-      <input
-        type="text"
-        value={topic}
-        onChange={(e) => setTopic(e.target.value)}
-        placeholder="Enter topic"
-        style={{ width: '300px', padding: '10px' }}
-      />
-      <button onClick={handleSubmit} style={{ marginLeft: '1rem', padding: '10px 20px' }}>
-        Start Quiz
-      </button>
-    </div>
+    <Container className="d-flex justify-content-center align-items-center" style={{ minHeight: '100vh', background:'#fdf6e3' }}>
+      <Card style={{ width: '100%', maxWidth: '500px', padding: '2rem', boxShadow: '0 4px 10px rgba(0, 0, 0, 0.1)' }}>
+        <Card.Body>
+          <Card.Title className="mb-4 text-center">🎓 Start a New Quiz</Card.Title>
+          <Form>
+            <Form.Group controlId="quizTopic">
+              <Form.Label>Test your Macedonian knowledge! Quiz on:</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="Enter topic"
+                value={topic}
+                onChange={(e) => setTopic(e.target.value)}
+              />
+            </Form.Group>
+            <div className="d-grid gap-2 mt-4">
+              <Button style={{background:'#4f83cc'}} onClick={handleSubmit} className=''>
+                Start Quiz
+              </Button>
+            </div>
+          </Form>
+        </Card.Body>
+      </Card>
+    </Container>
   );
 };
 

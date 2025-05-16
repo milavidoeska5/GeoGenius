@@ -103,7 +103,6 @@ const ChatBot = () => {
 
     return (
         <div className="chat-page">
-            <CustomNavbar />
 
             <div className="chat-interface">
                 <div className="chat-sidebar">
