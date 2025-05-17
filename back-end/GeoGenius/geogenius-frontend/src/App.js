@@ -8,6 +8,10 @@ import HomePage from "./pages/HomePage";
 import ProposeCardPage from "./pages/ProposeCardPage";
 import AdminPanel from "./pages/AdminPanel";
 import UserProfile from "./pages/UserProfile";
+import Chatbot from "./Chatbot";
+import QuizStart from "./QuizStart";
+import QuizPage from "./QuizPage";
+
 
 function App() {
   return (
@@ -29,6 +33,15 @@ function App() {
                   } />
                   <Route path="/profile" element={
                       <PrivateRoute><UserProfile /></PrivateRoute>
+                  } />
+                  <Route path="/chatbot" element={
+                      <Chatbot />
+                  } />
+                  <Route path="/quiz" element={
+                      <QuizStart />
+                  } />
+                  <Route path="/quiz/:topic" element={
+                      <QuizPage />
                   } />
 
                   <Route path="*" element={<Navigate to="/" />} />
