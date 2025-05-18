@@ -35,13 +35,13 @@ function App() {
                       <PrivateRoute><UserProfile /></PrivateRoute>
                   } />
                   <Route path="/chatbot" element={
-                      <Chatbot />
+                      <PrivateRoute><Chatbot /></PrivateRoute>
                   } />
                   <Route path="/quiz" element={
-                      <QuizStart />
+                      <PrivateRoute><QuizStart /></PrivateRoute>
                   } />
                   <Route path="/quiz/:topic" element={
-                      <QuizPage />
+                      <PrivateRoute><QuizPage /></PrivateRoute>
                   } />
 
                   <Route path="*" element={<Navigate to="/" />} />

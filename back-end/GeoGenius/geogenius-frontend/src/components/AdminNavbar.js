@@ -22,7 +22,7 @@ const AdminNavbar = () => {
                 className="d-flex justify-content-between align-items-center px-4 py-2 w-100 shadow-sm"
                 style={{
                     maxWidth: "1200px",
-                    backgroundColor: "#fdf6e3",
+                    backgroundColor: "white",
                     borderRadius: "20px",
                     border: "1px solid #e3e3e3",
                     fontFamily: "'Poppins', sans-serif"

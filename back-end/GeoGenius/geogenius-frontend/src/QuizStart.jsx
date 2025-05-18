@@ -17,6 +17,15 @@ const QuizStart = () => {
         <Container className="d-flex justify-content-center align-items-center" style={{ minHeight: '100vh', background:'#fdf6e3' }}>
             <Card style={{ width: '100%', maxWidth: '500px', padding: '2rem', boxShadow: '0 4px 10px rgba(0, 0, 0, 0.1)' }}>
                 <Card.Body>
+                    <div className="d-flex justify-content-start mb-3">
+                        <Button
+                            onClick={() => navigate("/")}
+                            variant="outline-secondary"
+                            className="rounded-3 fw-medium"
+                        >
+                            ← Back
+                        </Button>
+                    </div>
                     <Card.Title className="mb-4 text-center">🎓 Start a New Quiz</Card.Title>
                     <Form>
                         <Form.Group controlId="quizTopic">
