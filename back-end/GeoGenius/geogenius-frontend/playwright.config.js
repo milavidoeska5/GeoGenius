@@ -6,5 +6,8 @@ export default defineConfig({
         baseURL: 'http://localhost:3000',
         browserName: 'chromium',
         headless: false,
+        launchOptions: {
+            slowMo: 800,
+        }
     },
 });
