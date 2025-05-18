@@ -4,7 +4,7 @@ import GeoGeniusService from "../repository/GeoGeniusService";
 import FlashCard from "../components/FlashCard";
 import Navbar from "../components/Navbar";
 import { AuthContext } from "../context/AuthContext";
-import GoogleMap from "../GoogleMaps";
+import GoogleMap from "../components/GoogleMaps";
 
 const HomePage = () => {
     const [cards, setCards] = useState([]);

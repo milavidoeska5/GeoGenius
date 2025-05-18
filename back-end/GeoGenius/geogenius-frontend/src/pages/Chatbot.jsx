@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './Chatbot.css';
-import CustomNavbar from './CustomNavbar';
-import Navbar from "./components/Navbar";
+import CustomNavbar from '../CustomNavbar';
+import Navbar from "../components/Navbar";
 
 const ChatBot = () => {
     const [messages, setMessages] = useState([]);

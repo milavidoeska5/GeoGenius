@@ -8,9 +8,9 @@ import HomePage from "./pages/HomePage";
 import ProposeCardPage from "./pages/ProposeCardPage";
 import AdminPanel from "./pages/AdminPanel";
 import UserProfile from "./pages/UserProfile";
-import Chatbot from "./Chatbot";
-import QuizStart from "./QuizStart";
-import QuizPage from "./QuizPage";
+import Chatbot from "./pages/Chatbot";
+import QuizStart from "./pages/QuizStart";
+import QuizPage from "./pages/QuizPage";
 
 
 function App() {

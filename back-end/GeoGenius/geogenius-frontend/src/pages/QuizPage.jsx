@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import {Container, Card, Button, Form, Alert, Nav} from 'react-bootstrap';
-import Navbar from "./components/Navbar";
+import Navbar from "../components/Navbar";
 
 const QuizPage = () => {
     const { topic } = useParams();
