@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { Container, Card, Button, Form, Alert } from 'react-bootstrap';
+import {Container, Card, Button, Form, Alert, Nav} from 'react-bootstrap';
+import Navbar from "./components/Navbar";
 
 const QuizPage = () => {
     const { topic } = useParams();
@@ -66,7 +67,9 @@ const QuizPage = () => {
     if (!quizData) return <p className="text-center mt-4">Loading quiz...</p>;
 
     return (
+
         <Container className="py-5 bg-cream">
+            <Navbar style={{width:"100%"}}/>
             <Card className="p-4 shadow">
                 <Card.Body>
                     <Card.Title className="mb-4 text-center">📝 Quiz on: {topic}</Card.Title>

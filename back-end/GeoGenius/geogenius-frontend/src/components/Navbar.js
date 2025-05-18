@@ -23,7 +23,7 @@ const Navbar = () => {
                 className="navbar navbar-expand-lg shadow-sm px-4 py-2 w-100"
                 style={{
                     maxWidth: "95%",
-                    backgroundColor: "#fdf6e3",
+                    backgroundColor: "white",
                     borderRadius: "20px",
                     border: "1px solid #e3e3e3",
                     padding: "50px 40px"
@@ -60,10 +60,10 @@ const Navbar = () => {
                                 <Link className="nav-link fw-semibold text-dark" to="/">Home</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link fw-semibold text-dark" to="/learn">Learn More</Link>
+                                <Link className="nav-link fw-semibold text-dark" to="/chatbot">ChatBot</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link fw-semibold text-dark" to="/game">Game</Link>
+                                <Link className="nav-link fw-semibold text-dark" to="/quiz">Quiz</Link>
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link fw-semibold text-dark" to="/profile">Profile</Link>

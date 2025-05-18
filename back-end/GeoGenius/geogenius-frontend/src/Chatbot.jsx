@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './Chatbot.css';
 import CustomNavbar from './CustomNavbar';
+import Navbar from "./components/Navbar";
 
 const ChatBot = () => {
     const [messages, setMessages] = useState([]);
@@ -103,9 +104,11 @@ const ChatBot = () => {
 
     return (
         <div className="chat-page">
+            <Navbar/>
 
             <div className="chat-interface">
                 <div className="chat-sidebar">
+
                     <div className="new-chat-button" onClick={startNewChat}>
                         <button>+ New Chat</button>
                     </div>
@@ -129,13 +132,13 @@ const ChatBot = () => {
 
                 <div className="chatbot-container">
                     <div className="chatbot-header">
-                        <h2>AI Tutor Chat</h2>
+                        <h2>GeoTutor</h2>
                     </div>
 
                     <div className="chatbot-messages">
                         {messages.length === 0 ? (
                             <div className="empty-chat">
-                                <p>Ask me anything about your studies!</p>
+                                <p>Ask me anything about Macedonia!</p>
                             </div>
                         ) : (
                             messages.map((message, index) => (

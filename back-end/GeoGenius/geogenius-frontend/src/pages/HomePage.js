@@ -4,6 +4,7 @@ import GeoGeniusService from "../repository/GeoGeniusService";
 import FlashCard from "../components/FlashCard";
 import Navbar from "../components/Navbar";
 import { AuthContext } from "../context/AuthContext";
+import GoogleMap from "../GoogleMaps";
 
 const HomePage = () => {
     const [cards, setCards] = useState([]);
@@ -40,15 +41,18 @@ const HomePage = () => {
                 {cards.length === 0 ? (
                     <p className="text-center text-muted">No cards available.</p>
                 ) : (
-                    <div className="d-flex flex-wrap justify-content-center" style={{ gap: "30px" }}>
-                        {cards.map((card, index) => (
-                            <div key={card.id} style={{ marginTop: `${index % 3 === 0 ? 0 : (index % 2 === 0 ? 20 : 10)}px` }}>
+                    <div className="d-flex flex-wrap justify-content-center gap-4">
+                        {cards.map((card) => (
+                            <div key={card.id} style={{ minWidth: "200px" }}>
                                 <FlashCard title={card.title} description={card.description} />
                             </div>
                         ))}
                     </div>
+
                 )}
+
             </div>
+        <GoogleMap/>
         </div>
     );
 };
