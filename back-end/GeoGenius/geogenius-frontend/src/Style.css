@@ -1,0 +1,18 @@
+.btn-custom {
+    background-color: #4f83cc;
+    color: white;
+    font-weight: bold;
+}
+
+.bg-pastel-blue {
+    background-color: #dbeafe;
+}
+
+.bg-cream {
+    background-color: #fdf6e3;
+}
+body {
+    background-color: #fdf6e3 !important; /* your cream/yellow */
+    margin: 0;
+    padding: 0;
+}
